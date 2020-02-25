@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+  <nuxt />
 </template>
 
 <style>
@@ -22,5 +20,13 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+
+  color: #faf7ff;
+  background-color: #141434;
 }
 </style>

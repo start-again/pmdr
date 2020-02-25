@@ -1,0 +1,15 @@
+/* Roboto */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./Roboto-Regular.ttf') format('ttf');
+}
+
+/* Roboto Mono */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./RobotoMono-Regular.ttf') format('ttf');
+}

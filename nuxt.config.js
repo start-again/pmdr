@@ -23,7 +23,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    './assets/fonts/roboto.css',
+    './assets/css/cssgg.css',
+    './assets/css/global.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -47,5 +51,12 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  /*
+   ** Server configuration
+   */
+  server: {
+    port: 3000, // default: 3000
+    host: '0.0.0.0' // default: localhost
   }
 }
