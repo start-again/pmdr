@@ -17,9 +17,26 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
+   ** PWA configuration
+   */
+  pwa: {
+    meta: {
+      name: 'PomStat',
+      nativeUI: true
+    },
+    manifest: {
+      name: 'PomStat',
+      shortName: 'PomStat',
+      description: 'A minimalist pomodoro application.',
+      lang: 'en',
+      display: 'standalone',
+      background_color: '#141434'
+    }
+  },
+  /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#141434' },
   /*
    ** Global CSS
    */
