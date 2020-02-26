@@ -1,7 +1,7 @@
 export const actions = {
-  sendNotification() {
+  sendNotification(context, bodyContent) {
     const options = {
-      body: 'This is a test notification',
+      body: bodyContent,
       icon: '/icon.png',
       badge: '/badge.png'
     }

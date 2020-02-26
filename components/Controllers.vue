@@ -6,11 +6,8 @@
     <button v-else @click="pauseTimer">
       <i class="gg-play-pause-o"></i>
     </button>
-    <button @click="stopTimer">
+    <button @click="resetTimer">
       Stop the timer
-    </button>
-    <button @click="sendNotification">
-      Send a notification
     </button>
   </div>
 </template>
@@ -33,12 +30,8 @@ export default {
       this.$store.commit('pause')
     },
 
-    stopTimer() {
-      this.$store.commit('stop')
-    },
-
-    sendNotification() {
-      this.$store.dispatch('notifications/sendNotification')
+    resetTimer() {
+      this.$store.commit('reset')
     }
   }
 }

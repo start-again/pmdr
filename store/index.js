@@ -38,15 +38,29 @@ export const mutations = {
   },
 
   stop(state) {
-    clearInterval(state.timer.interval) // Stop the timer
-    state.timer.isRunning = false // Define the status of the timer
+    this.commit('reset')
 
     if (state.timer.currentSession === 'work') {
+      this.dispatch(
+        'notifications/sendNotification',
+        'Your working session is finished!'
+      )
       state.timer.timeLeft = state.timer.defaultValue.shortbreak
       state.timer.currentSession = 'shortbreak'
     } else {
+      this.dispatch(
+        'notifications/sendNotification',
+        'Your short break session is finished!'
+      )
       state.timer.timeLeft = state.timer.defaultValue.work
       state.timer.currentSession = 'work'
     }
+  },
+
+  reset(state) {
+    clearInterval(state.timer.interval) // Stop the timer
+    state.timer.isRunning = false // Define the status of the timer
+
+    state.timer.timeLeft = state.timer.defaultValue[state.timer.currentSession]
   }
 }
