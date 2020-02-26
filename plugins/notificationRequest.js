@@ -10,6 +10,12 @@ const main = async () => {
     alert('Notification API not supported!')
     return
   }
+
+  if (!('serviceWorker' in navigator)) {
+    alert('Service Workers API not supported!')
+    return
+  }
+
   await requestNotificationPermission()
 }
 

@@ -38,14 +38,7 @@ export default {
     },
 
     sendNotification() {
-      if ('serviceWorker' in navigator) {
-        const opt = {
-          body: 'You succes fully to our notifications service'
-        }
-        navigator.serviceWorker.ready.then(function(sw) {
-          sw.showNotification('title', opt)
-        })
-      }
+      this.$store.dispatch('notifications/sendNotification')
     }
   }
 }
