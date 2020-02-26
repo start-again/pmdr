@@ -9,6 +9,9 @@
     <button @click="stopTimer">
       Stop the timer
     </button>
+    <button @click="sendNotification">
+      Send a notification
+    </button>
   </div>
 </template>
 
@@ -32,6 +35,17 @@ export default {
 
     stopTimer() {
       this.$store.commit('stop')
+    },
+
+    sendNotification() {
+      if ('serviceWorker' in navigator) {
+        const opt = {
+          body: 'You succes fully to our notifications service'
+        }
+        navigator.serviceWorker.ready.then(function(sw) {
+          sw.showNotification('title', opt)
+        })
+      }
     }
   }
 }
