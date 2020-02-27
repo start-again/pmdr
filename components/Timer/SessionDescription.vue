@@ -1,12 +1,15 @@
 <template>
-  <div class="sessionDescription">{{ currentSession }}</div>
+  <div class="sessionDescription">
+    <span v-if="currentSession === 'work'">WORK</span>
+    <span v-else-if="currentSession === 'shortBreak'">SHORT BREAK</span>
+  </div>
 </template>
 
 <script>
 export default {
   computed: {
     currentSession() {
-      return this.$store.state.timer.currentSession
+      return this.$store.state.timer.currentSessionType
     }
   }
 }
@@ -18,7 +21,5 @@ export default {
 
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
-
-  text-transform: uppercase;
 }
 </style>

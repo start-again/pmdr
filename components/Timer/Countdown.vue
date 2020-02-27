@@ -1,21 +1,17 @@
 <template>
-  <div class="countdown">{{ minutes }}:{{ seconds }}</div>
+  <div class="countdown">
+    {{
+      this.$store.state.timer.displayOutput === ''
+        ? this.$store.commit(
+            'timer/displayTimeLeft',
+            this.$store.state.timer.defaultValue[
+              this.$store.state.timer.currentSessionType
+            ]
+          )
+        : this.$store.state.timer.displayOutput
+    }}
+  </div>
 </template>
-
-<script>
-export default {
-  props: {
-    minutes: {
-      type: Number,
-      default: null
-    },
-    seconds: {
-      type: String,
-      default: '00'
-    }
-  }
-}
-</script>
 
 <style>
 .countdown {

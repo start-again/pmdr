@@ -26,7 +26,7 @@ export default {
     },
     manifest: {
       name: 'PomStat',
-      shortName: 'PomStat',
+      short_name: 'PomStat',
       description: 'A minimalist pomodoro application.',
       lang: 'en',
       display: 'standalone',

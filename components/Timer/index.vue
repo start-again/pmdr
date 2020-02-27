@@ -1,44 +1,40 @@
 <template>
   <div class="timer">
-    <Countdown :minutes="minutes" :seconds="seconds" />
-    <SessionDescription />
+    <ProgressBar />
+    <div class="timer">
+      <Countdown />
+      <SessionDescription />
+    </div>
   </div>
 </template>
 
 <script>
+import ProgressBar from './ProgressBar'
 import Countdown from './Countdown'
 import SessionDescription from './SessionDescription'
 
 export default {
   components: {
+    ProgressBar,
     Countdown,
     SessionDescription
-  },
-
-  computed: {
-    timeLeft() {
-      return this.$store.state.timer.timeLeft
-    },
-
-    minutes() {
-      return Math.floor(this.timeLeft / 1000 / 60)
-    },
-
-    seconds() {
-      if (this.timeLeft / 1000 < 10) {
-        return '0' + this.timeLeft / 1000
-      } else {
-        return (this.timeLeft / 1000).toString()
-      }
-    }
   }
 }
 </script>
 
 <style>
 .timer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  z-index: -1000;
 }
 </style>
