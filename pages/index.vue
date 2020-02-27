@@ -9,7 +9,7 @@
 <script>
 import Timer from '@/components/Timer/index'
 import Controllers from '@/components/Controllers'
-import BottomNavBar from '@/components/NavBar/Bottom'
+import BottomNavBar from '@/components/Navbar/Bottom'
 
 export default {
   components: {
