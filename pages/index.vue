@@ -16,6 +16,12 @@ export default {
     Timer,
     Controllers,
     BottomNavBar
+  },
+
+  head() {
+    return {
+      title: 'Home'
+    }
   }
 }
 </script>

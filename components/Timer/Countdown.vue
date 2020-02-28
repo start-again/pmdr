@@ -13,6 +13,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      title: this.$store.state.timer.displayOutput
+    }
+  }
+}
+</script>
+
 <style>
 .countdown {
   font-family: 'Roboto Mono', monospace;

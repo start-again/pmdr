@@ -4,15 +4,47 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s | Pmdr',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+
+      // SEO
+      { name: 'author', content: 'Pmdr' },
       {
-        hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: 'An other minimalist pomodoro application.'
+      },
+
+      // Open Graph
+      { property: 'og:locale', content: 'en-US' },
+      { property: 'og:site_name', content: 'Pmdr' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://pmdr.lucasalt.fr' },
+      { property: 'og:title', content: 'Pmdr' },
+      {
+        property: 'og:description',
+        content: 'An other minimalist pomodoro application.'
+      },
+      { property: 'og:image', content: 'https://pmdr.lucasalt.fr/icon.png' },
+      { property: 'og:image:type', content: 'image/png' },
+      { property: 'og:image:alt', content: 'Pmdr logo' },
+      { property: 'fb:app_id', content: '192187705385445' },
+
+      // Twitter card
+      { property: 'twitter:card', content: 'summary' },
+      { property: 'twitter:site', content: '@StartAgainCo' },
+      { property: 'twitter:creator', content: '@StartAgainCo' },
+      { property: 'twitter:title', content: 'Pmdr' },
+      {
+        property: 'twitter:description',
+        content: 'An other minimalist pomodoro application.'
+      },
+      {
+        property: 'twitter:image',
+        content: 'https://pmdr.lucasalt.fr/icon.png'
+      },
+      { property: 'twitter:url', content: 'https://pmdr.lucasalt.fr' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -21,13 +53,13 @@ export default {
    */
   pwa: {
     meta: {
-      name: 'PomStat',
+      name: 'Pmdr',
       nativeUI: true
     },
     manifest: {
-      name: 'PomStat',
-      short_name: 'PomStat',
-      description: 'A minimalist pomodoro application.',
+      name: 'Pmdr',
+      short_name: 'Pmdr',
+      description: 'An other minimalist pomodoro application.',
       lang: 'en',
       display: 'standalone',
       background_color: '#141434'

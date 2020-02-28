@@ -1,6 +1,6 @@
 <template>
   <div class="bottom-navbar">
-    <nuxt-link to="/options">
+    <nuxt-link to="/parameters">
       <i class="gg">
         <i class="gg-menu"></i>
       </i>

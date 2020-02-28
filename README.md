@@ -2,21 +2,28 @@
   <br />
   <br />
   <br />
-  <img src="https://github.com/start-again/PomStat/blob/master/assets/img/logo.svg" width="256" height="auto" alt="Project logo" align="center" />
+  <img src="https://github.com/start-again/PomStat/blob/master/static/icon.png" width="256" height="auto" alt="Project logo" align="center" />
   <br />
   <br />
-  <h3 align="center">An other Pomodoro application</h3>
+  <h3 align="center">An other minimalist pomodoro application</h3>
 
   <p align="center">
-  <a href="https://npm.im/dropd-component"><img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?style=flat-square" /></a>
-  <a href="http://firsttimersonly.com"><img src="https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square" alt="First-timers Friendly"></a>
-  <a href="https://github.com/start-again/PomStat/blob/master/LICENSE" target="_blank"><img alt="License: GNU AGPLv3" src="https://img.shields.io/badge/License-GNU AGPLv3-yellow.svg?style=flat-square" /></a>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?style=flat-square" />
+  <a href="https://github.com/start-again/pmdr/stargazers"><img alt="Version" src="https://img.shields.io/github/stars/start-again/pmdr?style=flat-square" /></a>
+  <a href="https://github.com/start-again/pmdr/issues"><img alt="Version" src="https://img.shields.io/github/issues/start-again/pmdr?style=flat-square" /></a>  
+  <a href="http://firsttimersonly.com"><img src="https://img.shields.io/badge/first--timers-friendly-blue.svg?style=flat-square" alt="First-timers Friendly"></a>
+  <a href="https://github.com/start-again/pmdr/blob/master/LICENSE" target="_blank"><img alt="License: GNU AGPLv3" src="https://img.shields.io/github/license/start-again/pmdr?style=flat-square" /></a>
+  <a href="https://discord.gg/nEDcagb" target="_blank"><img alt="Discord server" src="https://img.shields.io/discord/520988062046486529?style=flat-square" /></a>
   </p>
 </p>
 
-## ✨ Pros:
+## 🖥️ Demo
 
-- 📱Supports touch devices
+The application is available on [it's own website](https://pmdr.lucasalt.fr/). You can also install it on your phone by going to the [application's website](https://pmdr.lucasalt.fr/) and then adding it to your home screen.
+
+## ✨ Pros
+
+- 📱 Supports touch devices
 - ✅ Optimized for Accessibilty
 - 🌈 Easy to use
 - 🦄 Optimized for performance
@@ -54,10 +61,11 @@ $ yarn generate
 * Website: https://www.lucasalt.fr
 * Twitter: [@LucasCtrlAlt](https://twitter.com/LucasCtrlAlt)
 * GitHub: [@LucasCtrl](https://github.com/LucasCtrl)
+* Discord server: [Start Again](https://discord.gg/nEDcagb)
 
 ## 🤝 Contributing
 
-1. Fork it (https://github.com/start-again/PomStat/fork)
+1. Fork it (https://github.com/start-again/pmdr/fork)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
@@ -76,5 +84,5 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-Copyright © 2019 [Start Again](https://github.com/start-again)<br />
-This project is under [GNU AGPLv3](https://github.com/start-again/PomStat/blob/master/LICENSE) Licence
+Copyright © 2020 [Start Again](https://github.com/start-again)<br />
+This project is under [GNU AGPLv3](https://github.com/start-again/pmdr/blob/master/LICENSE) Licence

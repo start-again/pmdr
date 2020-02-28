@@ -14,6 +14,12 @@ export default {
   components: {
     TopNavBar,
     Slider
+  },
+
+  head() {
+    return {
+      title: 'Parameters'
+    }
   }
 }
 </script>

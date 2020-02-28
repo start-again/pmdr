@@ -1,7 +1,7 @@
 {
-  "name": "pomstat",
+  "name": "pmdr",
   "version": "1.0.0",
-  "description": "A minimalist pomodoro application",
+  "description": "An other minimalist pomodoro application",
   "author": "LucasCtrl",
   "private": true,
   "scripts": {
