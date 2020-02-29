@@ -115,14 +115,4 @@ export const mutations = {
   updateDefaultValue(state, payload) {
     state.defaultValue[payload.sessionType] = payload.newDuration
   }
-
-  // changeWholeTime(seconds) {
-  //   if (state.defaultValue[state.sessionType] + seconds > 0) {
-  //     state.defaultValue[state.sessionType] += seconds
-  //     this.updateProgressBar(
-  //       state.defaultValue[state.sessionType],
-  //       state.defaultValue[state.sessionType]
-  //     )
-  //   }
-  // }
 }
