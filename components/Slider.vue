@@ -105,7 +105,7 @@ export default {
 }
 
 .slider .rangeSelectorContainer .vue-slider {
-  width: calc(290px - 16px) !important;
+  width: 80% !important;
 }
 
 .slider .rangeSelectorValue {
