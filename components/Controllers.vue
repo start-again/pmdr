@@ -23,7 +23,7 @@ export default {
 .controllers {
   position: absolute;
   left: 0;
-  bottom: 150px;
+  bottom: 100px;
   right: 0;
 
   display: flex;
