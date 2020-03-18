@@ -64,6 +64,9 @@ export default {
       display: 'standalone',
       background_color: '#141434',
     },
+    workbox: {
+      swURL: 'custom-sw.js',
+    },
   },
   /*
    ** Customize the progress-bar color
@@ -80,7 +83,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['./plugins/notificationRequest.js'],
+  plugins: [
+    './plugins/notificationRequest.js',
+    // './plugins/notificationEvent.js',
+  ],
   /*
    ** Nuxt.js dev-modules
    */
