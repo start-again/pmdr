@@ -17,9 +17,12 @@ export const mutations = {
         this.state.timeLeft = this.state.timeLeft - 1
       } else {
         // If not time remaining in the timer,
-        // Stop the timer and start the next session
-        this.commit('timer/pause')
-        this.commit('timer/startNextSession')
+        this.commit('timer/pause') // Stop the timer
+        this.dispatch(
+          'notifications/sessionEnd',
+          this.state.currentSession.name
+        ) // Send a notification
+        this.commit('timer/startNextSession') // Init the timer for the next session
       }
     }, 1000)
   },

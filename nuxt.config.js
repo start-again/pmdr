@@ -13,7 +13,7 @@ export default {
       { name: 'author', content: 'Pmdr' },
       {
         name: 'description',
-        content: 'An other minimalist pomodoro application.'
+        content: 'An other minimalist pomodoro application.',
       },
 
       // Open Graph
@@ -24,7 +24,7 @@ export default {
       { property: 'og:title', content: 'Pmdr' },
       {
         property: 'og:description',
-        content: 'An other minimalist pomodoro application.'
+        content: 'An other minimalist pomodoro application.',
       },
       { property: 'og:image', content: 'https://pmdr.lucasalt.fr/icon.png' },
       { property: 'og:image:type', content: 'image/png' },
@@ -38,15 +38,15 @@ export default {
       { property: 'twitter:title', content: 'Pmdr' },
       {
         property: 'twitter:description',
-        content: 'An other minimalist pomodoro application.'
+        content: 'An other minimalist pomodoro application.',
       },
       {
         property: 'twitter:image',
-        content: 'https://pmdr.lucasalt.fr/icon.png'
+        content: 'https://pmdr.lucasalt.fr/icon.png',
       },
-      { property: 'twitter:url', content: 'https://pmdr.lucasalt.fr' }
+      { property: 'twitter:url', content: 'https://pmdr.lucasalt.fr' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** PWA configuration
@@ -54,7 +54,7 @@ export default {
   pwa: {
     meta: {
       name: 'Pmdr',
-      nativeUI: true
+      nativeUI: true,
     },
     manifest: {
       name: 'Pmdr',
@@ -62,8 +62,8 @@ export default {
       description: 'An other minimalist pomodoro application.',
       lang: 'en',
       display: 'standalone',
-      background_color: '#141434'
-    }
+      background_color: '#141434',
+    },
   },
   /*
    ** Customize the progress-bar color
@@ -75,7 +75,7 @@ export default {
   css: [
     './assets/fonts/roboto.css',
     './assets/css/cssgg.css',
-    './assets/css/global.css'
+    './assets/css/global.css',
   ],
   /*
    ** Plugins to load before mounting the App
@@ -86,7 +86,7 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
   ],
   /*
    ** Nuxt.js modules
@@ -99,13 +99,13 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {},
   },
   /*
    ** Server configuration
    */
   server: {
     port: 3000, // default: 3000
-    host: '0.0.0.0' // default: localhost
-  }
+    host: '0.0.0.0', // default: localhost
+  },
 }
