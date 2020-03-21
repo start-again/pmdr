@@ -8,17 +8,22 @@
         </div>
       </template>
     </Progression>
+    <div class="controllers">
+      <Controllers />
+    </div>
   </div>
 </template>
 
 <script>
 import Progression from '@/components/Timer/Progression'
+import Controllers from '@/components/Timer/Controllers'
 
 import displayTime from '@/utils/displayTime'
 
 export default {
   components: {
     Progression,
+    Controllers,
   },
 
   computed: {
@@ -45,5 +50,15 @@ export default {
 
 .timeLeft {
   font-size: 3.5rem;
+}
+
+.controllers {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+  bottom: 50px;
+
+  text-align: center;
 }
 </style>
