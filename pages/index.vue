@@ -13,15 +13,18 @@
       <li>Interval: {{ $store.state.timer.isRunning }}</li>
     </ul>
     <Controllers />
+    <InfoCards />
   </div>
 </template>
 
 <script>
 import Controllers from '@/components/Controllers'
+import InfoCards from '@/components/InfoCards'
 
 export default {
   components: {
     Controllers,
+    InfoCards,
   },
 
   beforeMount() {

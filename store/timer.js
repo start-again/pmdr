@@ -48,7 +48,7 @@ export const mutations = {
 
         // If the previous session was a working one
         // Init the timer with a short break or long break session
-        if (this.state.round % 4 === 0) {
+        if (this.state.round % this.state.roundSeries === 0) {
           // Check if the last session was the last in a series
           // Then start a long break session
           this.state.currentSession = {
