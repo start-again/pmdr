@@ -33,7 +33,7 @@ body {
   width: 100%;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 520px) {
   .container {
     margin: 0 auto;
     width: 500px;

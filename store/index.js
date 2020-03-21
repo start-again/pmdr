@@ -12,6 +12,7 @@ export const state = () => ({
     name: 'Work', // Name of the current session, this value is displayed on the app
   },
   timeLeft: 0, // Time left in the counter
+  displayTime: '0:00', // Convert timeLeft in min:sec
   roundSeries: 4, // After X rounds, start a long break session
   round: 0, // Round number, if a multiple of 4, start a long break session
 })
