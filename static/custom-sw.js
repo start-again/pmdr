@@ -2,6 +2,9 @@
 
 // Handle event when user click on the notification
 self.addEventListener('notificationclick', function(event) {
+  // Close the notification when she's clicked
+  event.notification.close()
+
   // This looks to see if the current window is already open and focuses if it is
   event.waitUntil(
     clients

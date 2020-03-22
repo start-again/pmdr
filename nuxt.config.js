@@ -65,7 +65,7 @@ export default {
       background_color: '#141434',
     },
     workbox: {
-      swURL: 'custom-sw.js',
+      importScripts: ['./static/custom-sw.js'],
     },
   },
   /*
