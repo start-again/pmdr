@@ -10,7 +10,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
 
       // SEO
-      { name: 'author', content: 'Pmdr' },
+      { name: 'author', content: 'Start Again' },
       {
         name: 'description',
         content: 'An other minimalist pomodoro application.',
@@ -62,7 +62,7 @@ export default {
       description: 'An other minimalist pomodoro application.',
       lang: 'en',
       display: 'standalone',
-      background_color: '#141434',
+      background_color: '#e2f3f5',
     },
     workbox: {
       importScripts: ['custom-sw.js'],
@@ -71,15 +71,11 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#141434' },
+  loading: { color: '#e2f3f5' },
   /*
    ** Global CSS
    */
-  css: [
-    './assets/fonts/roboto.css',
-    './assets/css/cssgg.css',
-    './assets/css/global.css',
-  ],
+  css: ['./assets/fonts/roboto.css'],
   /*
    ** Plugins to load before mounting the App
    */
