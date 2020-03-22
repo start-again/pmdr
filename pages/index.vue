@@ -11,6 +11,8 @@ import TopNavBar from '@/components/NavBar/Top'
 import InfoCards from '@/components/InfoCards'
 import Timer from '@/components/Timer'
 
+import displayTime from '@/utils/displayTime'
+
 export default {
   components: {
     TopNavBar,
@@ -24,7 +26,7 @@ export default {
 
   head() {
     return {
-      title: 'Home',
+      title: displayTime(this.$store.state.timeLeft),
     }
   },
 }

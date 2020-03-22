@@ -1,17 +1,20 @@
-/* eslint-disable no-console */
+/* eslint-disable no-undef */
 
 // Handle event when user click on the notification
 self.addEventListener('notificationclick', function(event) {
-  const notification = event.notification // Get the notification
-  const action = event.action // Get the actions of the notification
-
-  console.log(action)
-
-  if (action === 'confirm') {
-    console.log('Action confirmed')
-    notification.close()
-  } else {
-    console.log(this)
-    notification.close()
-  }
+  // This looks to see if the current window is already open and focuses if it is
+  event.waitUntil(
+    clients
+      .matchAll({
+        type: 'window',
+      })
+      .then(function(clientList) {
+        for (let i = 0; i < clientList.length; i++) {
+          const client = clientList[i]
+          if (client.url === 'http://localhost:3000/' && 'focus' in client)
+            return client.focus()
+        }
+        if (clients.openWindow) return clients.openWindow('/')
+      })
+  )
 })
