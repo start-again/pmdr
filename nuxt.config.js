@@ -95,14 +95,7 @@ export default {
         id: 'G-XN49RM68VH',
       },
     ],
-    '@nuxtjs/gtm',
   ],
-  /*
-   ** Google Tag Manager
-   */
-  gtm: {
-    id: 'GTM-WCFFGPP',
-  },
   /*
    ** Nuxt.js modules
    */
