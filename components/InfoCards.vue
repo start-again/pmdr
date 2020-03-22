@@ -32,6 +32,11 @@ export default {
 
 <style scoped>
 .infoCards {
+  position: fixed;
+  right: 0;
+  bottom: 1rem;
+  left: 0;
+
   display: grid;
 
   gap: 1rem;

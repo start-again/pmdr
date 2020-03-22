@@ -39,16 +39,19 @@ export const mutations = {
     this.commit('timer/init')
   },
 
+  skip(state) {
+    // Skip to the end of the current session
+    this.commit('timer/pause')
+    this.commit('timer/startNextSession')
+  },
+
   startNextSession(state) {
     // Start a new session at the end of the previous session.
     switch (this.state.currentSession.id) {
       case 'work':
-        // Add a round to the series
-        this.commit('rounds/add')
-
         // If the previous session was a working one
         // Init the timer with a short break or long break session
-        if (this.state.round % this.state.roundSeries === 0) {
+        if (this.state.round === this.state.roundSeries) {
           // Check if the last session was the last in a series
           // Then start a long break session
           this.state.currentSession = {
@@ -66,6 +69,9 @@ export const mutations = {
         break
 
       case 'shortBreak':
+        // Add a round to the series
+        this.commit('rounds/add')
+
         // If the previous session was a short breaking one
         // Init the timer with a working session
         this.state.currentSession = {
@@ -81,6 +87,8 @@ export const mutations = {
           id: 'work',
           name: 'Work',
         }
+        // Reset the round session when the series is done
+        this.commit('rounds/reset')
         break
     }
     this.commit('timer/init')
