@@ -4,7 +4,7 @@ export const state = () => ({
   sessionDuration: {
     // All the values inside this are in seconds
     work: 1500, // Default time for the work session
-    shortBreak: 3000, // Default time for the short break session
+    shortBreak: 300, // Default time for the short break session
     longBreak: 900, // Default time for the long session break
   },
   currentSession: {
