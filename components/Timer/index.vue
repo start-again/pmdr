@@ -1,40 +1,64 @@
 <template>
   <div class="timer">
-    <ProgressBar />
-    <div class="timer">
-      <Countdown />
-      <SessionDescription />
+    <Progression>
+      <template v-slot:informations>
+        <div class="informations">
+          <p class="description">{{ $store.state.currentSession.name }}</p>
+          <p class="timeLeft">{{ diplayTimeLeft }}</p>
+        </div>
+      </template>
+    </Progression>
+    <div class="controllers">
+      <Controllers />
     </div>
   </div>
 </template>
 
 <script>
-import ProgressBar from './ProgressBar'
-import Countdown from './Countdown'
-import SessionDescription from './SessionDescription'
+import Progression from '@/components/Timer/Progression'
+import Controllers from '@/components/Timer/Controllers'
+
+import displayTime from '@/utils/displayTime'
 
 export default {
   components: {
-    ProgressBar,
-    Countdown,
-    SessionDescription
-  }
+    Progression,
+    Controllers,
+  },
+
+  computed: {
+    diplayTimeLeft() {
+      return displayTime(this.$store.state.timeLeft)
+    },
+  },
 }
 </script>
 
-<style>
-.timer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+<style scoped>
+.informations {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
 
+  color: #ffffff;
+  text-align: center;
+}
+
+.description {
+  font-size: 2rem;
+}
+
+.timeLeft {
+  font-size: 3.5rem;
+}
+
+.controllers {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
 
-  z-index: -1000;
+  position: relative;
+  bottom: 50px;
+
+  text-align: center;
 }
 </style>

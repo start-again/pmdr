@@ -1,39 +1,33 @@
 <template>
   <div class="home">
+    <TopNavBar />
     <Timer />
-    <Controllers />
-    <BottomNavBar />
+    <InfoCards />
   </div>
 </template>
 
 <script>
-import Timer from '@/components/Timer/index'
-import Controllers from '@/components/Controllers'
-import BottomNavBar from '@/components/Navbar/Bottom'
+import TopNavBar from '@/components/NavBar/Top'
+import InfoCards from '@/components/InfoCards'
+import Timer from '@/components/Timer'
+
+import displayTime from '@/utils/displayTime'
 
 export default {
   components: {
+    TopNavBar,
+    InfoCards,
     Timer,
-    Controllers,
-    BottomNavBar
+  },
+
+  beforeMount() {
+    this.$store.commit('timer/init')
   },
 
   head() {
     return {
-      title: 'Home'
+      title: displayTime(this.$store.state.timeLeft),
     }
-  }
+  },
 }
 </script>
-
-<style>
-.home {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
-
-  height: 100vh;
-  width: 100%;
-}
-</style>

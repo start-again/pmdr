@@ -1,12 +1,14 @@
 export const actions = {
-  sendNotification(context, bodyContent) {
+  sessionEnd(context, payload) {
+    // Default notification when a session is over. WIP
+    // TODO: Action button to close the notification and go on the website
     const options = {
-      body: bodyContent,
+      body: `Your ${payload.toLowerCase()} session is done!`,
       icon: '/icon.png',
-      badge: '/badge.png'
+      badge: '/badge.png',
     }
     navigator.serviceWorker.ready.then(function(sw) {
       sw.showNotification('PomStat', options)
     })
-  }
+  },
 }
