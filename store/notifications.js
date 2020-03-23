@@ -7,7 +7,7 @@ export const actions = {
       icon: '/icon.png',
       badge: '/badge.png',
     }
-    navigator.serviceWorker.ready.then(function(sw) {
+    navigator.serviceWorker.ready.then(function (sw) {
       sw.showNotification('PomStat', options)
     })
   },

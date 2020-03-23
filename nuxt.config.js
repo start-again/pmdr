@@ -80,8 +80,9 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    './plugins/HackTimer.js',
+    './plugins/HackTimerWorker.js',
     './plugins/notificationRequest.js',
-    // './plugins/notificationEvent.js',
   ],
   /*
    ** Nuxt.js dev-modules
