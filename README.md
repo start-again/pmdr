@@ -8,7 +8,7 @@
   <h3 align="center">An other minimalist pomodoro application</h3>
 
   <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-2.0.0-blue.svg?style=flat-square" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?style=flat-square" />
   <a href="https://github.com/start-again/pmdr/stargazers"><img alt="Version" src="https://img.shields.io/github/stars/start-again/pmdr?style=flat-square" /></a>
   <a href="https://github.com/start-again/pmdr/issues"><img alt="Version" src="https://img.shields.io/github/issues/start-again/pmdr?style=flat-square" /></a>  
   <a href="http://firsttimersonly.com"><img src="https://img.shields.io/badge/first--timers-friendly-blue.svg?style=flat-square" alt="First-timers Friendly"></a>
